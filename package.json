@@ -1,0 +1,44 @@
+{
+  "license": "MIT",
+  "author": {
+    "name": "Pulilab",
+    "email": "hosting@pulilab.com",
+    "website": "http://www.pulilab.com"
+  },
+  "name": "vuex-geolocation",
+  "version": "1.0",
+  "description": "A vuex plugin to seamlessly integrate the geo-location service",
+  "keywords": [
+    "vuejs",
+    "vuex",
+    "geolocation"
+  ],
+  "main": "dist/vuex-geolocation.js",
+  "scripts": {
+    "dev": "poi",
+    "build": "rm -r dist && poi build"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "cross-env": "^5.1.3",
+    "eslint": "^4.13.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "poi": "^9.6.3"
+  },
+  "dependencies": {
+    "vue": "^2.5.13",
+    "vuex": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pulilab/vuex-geolocationt"
+  },
+  "files": [
+    "dist"
+  ]
+}
