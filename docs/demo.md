@@ -3,18 +3,67 @@
 
 >This is an interactive demo, please accept the Position permission pop-up in the browser
 
+!> To test the plugin is possible to change the browser location trough the Chrome console. [Link to official documentation](https://developers.google.com/web/tools/chrome-devtools/device-mode/device-input-and-sensors)
+
 <vuep template="#base"></vuep>
 
 <script v-pre type="text/x-template" id="base">
   <template>
+    <div>
 
+      <div>
+        {{state.geolocation.lat}}
+        {{state.geolocation.lng}}
+      </div>
+
+      <div>
+        {{state.geolocation.error}}
+      </div>
+
+      <div>
+        {{state.geolocation.watchID}}
+      </div>
+
+      <div>
+        <button @click="clearWatch"> Clear Watch </button>
+        <button @click="watchPosition"> Watch Position </button>
+        <button @click="getCurrentPosition"> Get Current Position </button>
+      </div>
+
+    </div>
   </template>
 
   <script>
-    Vue.use()
+    import VuexGeolocation from './code/vuex-geolocation.js';
+    import GeolocationUtilities from './code/geolocation-utilities.js';
+
+    const options = {
+      autoWatch: true,
+      moduleName: 'geolocation',
+      enableHighAccuracy: true,
+      maximumAge: 30000,
+      timeout: 27000
+    }
+    const store = new Vuex.Store({});
+    VuexGeolocation.sync(store, options);
+
+
     module.exports = {
       data: function () {
-        return {}
+        return {
+          state: store.state
+        }
+      },
+      methods: {
+        clearWatch () {
+          VuexGeolocation.clearWatch();
+        },
+        watchPosition () {
+          VuexGeolocation.watchPosition();
+        },
+        getCurrentPosition () {
+          VuexGeolocation.getCurrentPosition();
+        }
       }
     }
   </script>
