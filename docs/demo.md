@@ -1,9 +1,9 @@
 # Demo
 
 
->This is an interactive demo, please accept the Position permission pop-up in the browser
+>This is an interactive demo, please accept the Position permission pop-up in the browser.
 
-!> To test the plugin is possible to change the browser location trough the Chrome console. [Link to official documentation](https://developers.google.com/web/tools/chrome-devtools/device-mode/device-input-and-sensors)
+!> To test the plugin it is possible to change the browser location through the Chrome console. [Link to official documentation](https://developers.google.com/web/tools/chrome-devtools/device-mode/device-input-and-sensors)
 
 <vuep template="#base"></vuep>
 
