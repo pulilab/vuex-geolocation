@@ -13,7 +13,7 @@ yarn add vuex-geolocation
 ### Usage
 !> To use this plugin, a module bundler is needed, the module is built in CommonJS format.
 
-!> Beside `localhost`, the geolocation service and this plugin works only on **https**
+!> Besides `localhost`, the geolocation service and this plugin works only on **https**
 
 ```js
 import Vue from 'vue';
@@ -41,7 +41,7 @@ At this point your store will contain a new module called geolocation (if not co
 }
 ```
 
-If the user accepts to share his/her position with the code, lat and lon will be filled with the user coordinates, otherwise the error message returned by the geolocation service are present in the `error Object`. If the plugin is actively tracking the user position the `watchID` parameter contains an ID
+If the user accepts to share their position with the code, lat and lon will be filled with the user coordinates, otherwise the error message returned by the geolocation service are present in the `error Object`. If the plugin is actively tracking the user position the `watchID` parameter contains an ID.
 
 An example of using the user position in your components is:
 
