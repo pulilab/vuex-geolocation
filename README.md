@@ -1,5 +1,6 @@
 # vuex-geolocation
   > A vuex plugin to seamlessly integrate the geo-location service
+
   > See the [docs](https://pulilab.github.io/vuex-geolocation/#/) for full information
 ## Features
   - Integrates directly with vuex
