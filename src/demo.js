@@ -1,7 +1,7 @@
 /* eslint-disable no-new,func-names */
 import Vue from 'vue';
 import Vuex from 'vuex';
-import VuexGeolocation from './index.js';
+import VuexGeolocation from './vuex-geolocation.js';
 import GeolocationUtilities from './geolocation-utilities.js';
 import Demo from './components/Demo.vue';
 
