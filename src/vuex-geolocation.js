@@ -10,6 +10,7 @@ export default {
   watchID: null,
   success ({coords: {latitude, longitude}}) {
     this.store.commit(`${this.options.moduleName}/LOCATION_CHANGED`, {lat: latitude, lng: longitude});
+    this.store.commit(`${this.options.moduleName}/LOCATION_ERROR`, {code: null, message: ''});
   },
   error (error) {
     this.store.commit(`${this.options.moduleName}/LOCATION_ERROR`, error);
