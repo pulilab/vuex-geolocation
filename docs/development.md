@@ -4,18 +4,18 @@
 
 Fork the repository on GitHub:
 
-> https://github.com/pulilab/vue-django-feedback
+> https://github.com/pulilab/vuex-geolocation
 
 Clone the repo:
 
 ```shell
-git clone git@github.com:YOURNICKNAME/vue-django-feedback.git
+git clone git@github.com:YOURNICKNAME/vuex-geolocation.git
 ```
 
 Cd in the newly created folder and install the dependencies
 
 ```shell
-cd vue-django-feedback
+cd vuex-geolocation
 yarn
 # OR
 npm install
