@@ -1,6 +1,9 @@
 module.exports = (options, req) => {
   const base = {
-    entry: './src/index.js',
+    entry: {
+      'vuex-geolocation': './src/vuex-geolocation.js',
+      'geolocation-utilities': './src/geolocation-utilities.js'
+    },
     sourceMap: false,
     vendor: false
   };
@@ -13,8 +16,7 @@ module.exports = (options, req) => {
     html: false,
     library: true,
     filename: {
-      js: 'vuex-geolocation.js',
-      chunk: '[id].chunk.js'
+      js: '[name].js'
     }
   };
   const extend = options.mode === 'production' ? production : dev;
