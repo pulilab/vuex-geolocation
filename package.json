@@ -16,7 +16,7 @@
   "main": "dist/vuex-geolocation.js",
   "scripts": {
     "dev": "poi",
-    "build": "rm -r dist && poi build && cp -r dist docs/code"
+    "build": "rm -rf dist && rm -rf docs/code  && poi build && cp -r dist docs/code"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
