@@ -11,9 +11,9 @@ yarn add vuex-geolocation
 ```
 
 ### Usage
-!> To use this plugin a module bundler is needed, the module is built in CommonJS format.
+!> To use this plugin, a module bundler is needed, the module is built in CommonJS format.
 
-!> Beside `localhost` the geolocation service and this plugin works only on **https**
+!> Besides `localhost`, the geolocation service and this plugin works only on **https**
 
 ```js
 import Vue from 'vue';
@@ -27,7 +27,7 @@ const store = new Vuex.Store({});
 VuexGeolocation.sync(store);
 ```
 
-At this point your store will contain a new module called geolocation (if not differently configured). The geolocation module has the following structure:
+At this point your store will contain a new module called geolocation (if not configured differently). The geolocation module has the following structure:
 
 ```js
 {
@@ -41,9 +41,9 @@ At this point your store will contain a new module called geolocation (if not di
 }
 ```
 
-If the user accept to share his/her position with the code lat and lon will be filled with the user coordinates, otherwise the error message returned by the geolocation service are present in the `error Object`. If the plugin is actively tracking the user position the `watchID` parameter contains an ID
+If the user accepts to share their position with the code, lat and lon will be filled with the user coordinates, otherwise the error message returned by the geolocation service are present in the `error Object`. If the plugin is actively tracking the user position the `watchID` parameter contains an ID.
 
-An example on using the user position in your components is:
+An example of using the user position in your components is:
 
 ```html
 <template>
@@ -68,10 +68,10 @@ export default {
 </script>
 ```
 
-### Additional GeoLocation utilities
+### Additional GeoLocation Utilities
 
-Optionally is possible to import another mini set of utility that contains few utilities function.
-At the moment the only function finalized is to calculate the distance between two set of coordinates, it's a rather naive and simple function but effective.
+Optionally it is possible to import another mini set of utilities which contain fewer utilities' functions.
+At the moment the only completed function is able to calculate the distance between two sets of coordinates. It is a rather simple function but effective.
 
 ```js
 import Vue from 'vue';
@@ -80,7 +80,7 @@ import GeolocationUtilities from './vuex-geolocation/geolocation-utilities.js';
 Vue.use(GeolocationUtilities);
 ```
 
-After this code is possible to use the function in your Vue components as follow:
+With this code it is possible to use the function in your Vue components as follows:
 
 ```html
 <template>
