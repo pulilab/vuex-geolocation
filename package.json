@@ -6,7 +6,7 @@
     "website": "http://www.pulilab.com"
   },
   "name": "vuex-geolocation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A vuex plugin to seamlessly integrate the geo-location service",
   "keywords": [
     "vuejs",
