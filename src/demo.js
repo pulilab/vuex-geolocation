@@ -6,11 +6,11 @@ import GeolocationUtilities from './geolocation-utilities.js';
 import Demo from './components/Demo.vue';
 
 Vue.use(Vuex);
-Vue.use(GeolocationUtilities);
 
 const store = new Vuex.Store({});
-
-VuexGeolocation.sync(store);
+const vuexGeolocation = VuexGeolocation.sync(store);
+Vue.use(vuexGeolocation);
+Vue.use(GeolocationUtilities);
 
 new Vue({
   el: '#app',

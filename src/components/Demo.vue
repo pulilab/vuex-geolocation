@@ -24,7 +24,6 @@
 </template>
 
 <script>
-import VuexGeolocation from '../vuex-geolocation.js';
 export default {
   computed: {
     location () {
@@ -39,13 +38,13 @@ export default {
   },
   methods: {
     clearWatch () {
-      VuexGeolocation.clearWatch();
+      this.$vuexGeolocation.clearWatch();
     },
     watchPosition () {
-      VuexGeolocation.watchPosition();
+      this.$vuexGeolocation.watchPosition();
     },
     getCurrentPosition () {
-      VuexGeolocation.getCurrentPosition();
+      this.$vuexGeolocation.getCurrentPosition(10);
     }
   }
 };
