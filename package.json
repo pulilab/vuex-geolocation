@@ -16,19 +16,25 @@
   "main": "dist/vuex-geolocation.js",
   "scripts": {
     "dev": "poi",
-    "build": "rm -rf dist && rm -rf docs/code  && poi build && cp -r dist docs/code"
+    "build": "rm -rf dist && rm -rf docs/code  && poi build && cp -r dist docs/code",
+    "test": "jest --watch"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
+    "babel-jest": "^22.2.2",
     "cross-env": "^5.1.3",
     "eslint": "^4.13.1",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-html": "^4.0.1",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.12.2",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "poi": "^9.6.3"
+    "jest": "^22.3.0",
+    "poi": "^9.6.3",
+    "regenerator-runtime": "^0.11.1"
   },
   "dependencies": {
     "vue": "^2.5.13",

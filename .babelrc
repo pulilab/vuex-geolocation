@@ -1,0 +1,9 @@
+{
+  "presets": ["poi"],
+  "env": {
+    "test": {
+      "presets": ["jest"],
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}

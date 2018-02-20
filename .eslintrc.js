@@ -5,20 +5,19 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
-    jasmine: true
+    'jest/globals': true
   },
-  extends: 'standard',
-  // required to lint *.vue files
+  extends: ['plugin:jest/recommended', 'standard'],
   plugins: [
-    'html'
+    'html',
+    'jest'
   ],
-  // add your custom rules here
   rules: {
     'camelcase': 0,
     'arrow-parens': 0,
     'one-var': 0,
-    'semi': ["warn", "always"],
-    'eol-last': ["error", "always"]
+    'semi': ['warn', 'always'],
+    'eol-last': ['error', 'always']
   },
   globals: {},
   settings: {
