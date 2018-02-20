@@ -19,23 +19,23 @@ The configuration object is composed by the following properties:
 `modulename` and `autoWatch` control the plugin behavior, all other parameters go straight to the configuration of the geolocation service. For a full list of the configurations and a more detailed exploitation, refer to [this MDN article](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition) and
 [this article](https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions)
 
-This methods returns the **unsyc** function
+This methods returns the **install** function to be passed to `Vue.use()`
 
 
-#### unsync()
+#### $vuexGeolocation.unsync()
 Function returned by the sync method and also accessible from the the plugin instance, if called remove the store integration and stop the watch position service.
 
 
-#### watchPosition()
+#### $vuexGeolocation.watchPosition()
 If `autoWatch` is not set to `true` or if the watch was stopped by `clearWatch()` this function enables the position tracking again.
 
 
-#### clearWatch()
+#### $vuexGeolocation.clearWatch()
 
 Manually stops the position tracking, but preserves the store integration and the already stored values.
 
 
-#### getCurrentPosition()
+#### $vuexGeolocation.getCurrentPosition()
 Instead of continuously tracking the user position, this method checks for the user position only once and sets the store accordingly, the `watchID` variable will still be set to `null`.
 
 

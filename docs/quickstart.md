@@ -24,7 +24,8 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({});
 
-VuexGeolocation.sync(store);
+const vuexGeolocation = VuexGeolocation.sync(store);
+Vue.use(vuexGeolocation)
 ```
 
 At this point your store will contain a new module called geolocation (if not configured differently). The geolocation module has the following structure:
@@ -67,6 +68,15 @@ export default {
 }
 </script>
 ```
+
+
+### Instance methods
+>This are optionals and offer a more fine grained control over the behavior of the plugin, you can invoke any of the methods in your components instance.
+
+All the methods are prefixed with `$vuexGeolocation` and can be used with ` this.$vuexGeolocation.methodName()`
+
+See [Configuration](configuration) section for more details
+
 
 ### Additional GeoLocation Utilities
 

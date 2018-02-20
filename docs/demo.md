@@ -35,7 +35,6 @@
 
   <script>
     import VuexGeolocation from './code/vuex-geolocation.js';
-    import GeolocationUtilities from './code/geolocation-utilities.js';
 
     const options = {
       autoWatch: true,
@@ -45,8 +44,8 @@
       timeout: 27000
     }
     const store = new Vuex.Store({});
-    VuexGeolocation.sync(store, options);
-
+    const vG = VuexGeolocation.sync(store, options);
+    Vue.use(vG)
 
     module.exports = {
       data: function () {
@@ -56,13 +55,13 @@
       },
       methods: {
         clearWatch () {
-          VuexGeolocation.clearWatch();
+          this.$vuexGeolocation.clearWatch();
         },
         watchPosition () {
-          VuexGeolocation.watchPosition();
+          this.$vuexGeolocation.watchPosition();
         },
         getCurrentPosition () {
-          VuexGeolocation.getCurrentPosition();
+          this.$vuexGeolocation.getCurrentPosition();
         }
       }
     }
