@@ -38,3 +38,12 @@ yarn build
 ```
 
 > Dist code is now present in the dist folder
+
+
+## Test
+> Substitute npm run to yarn if you are using npm
+The unit test for this plugin are ran with jest.
+
+```shell
+yarn test
+```

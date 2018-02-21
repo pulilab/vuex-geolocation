@@ -2,9 +2,9 @@
 
 > The preferred way to use this component with nuxt is trough the use of a plugin
 
-vuex-geolocation was born in a nuxt project it works perfectly in combination with it.
+vuex-geolocation was born in a nuxt project and it works perfectly in combination with it.
 
-Add a new plugin in your plugin folder, let's call it `vuex-geolocation.js`
+Add a new plugin in your plugin folder and let's call it `vuex-geolocation.js`
 
 ```js
 import VuexGeolocation from 'vuex-geolocation';
@@ -18,7 +18,8 @@ export default ({store}) => {
 
 ```
 
-What is left is to enable the plugin in `nuxt.config.js` since the geolocation is only available to the client we need to disable it on the server rendering
+What is left is to enable the plugin in `nuxt.config.js`.
+Since the geolocation is only available to the client we need to disable it on the server rendering.
 
 
 ```js
