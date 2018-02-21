@@ -18,7 +18,7 @@ yarn add vuex-geolocation
 ```js
 import Vue from 'vue';
 import Vuex from 'vuex';
-import VuexGeolocation from './index.js';
+import VuexGeolocation from 'vuex-geolocation';
 
 Vue.use(Vuex);
 
@@ -85,7 +85,7 @@ At the moment the only completed function is able to calculate the distance betw
 
 ```js
 import Vue from 'vue';
-import GeolocationUtilities from './vuex-geolocation/geolocation-utilities.js';
+import GeolocationUtilities from 'vuex-geolocation/dist/geolocation-utilities.js';
 
 Vue.use(GeolocationUtilities);
 ```
@@ -115,7 +115,7 @@ export default {
     },
     computed: {
         distance () {
-            return this.getGeoDistance(this.pointOne, this.pointTwo)
+            return this.$getGeoDistance(this.pointOne, this.pointTwo)
         }
     }
 }
