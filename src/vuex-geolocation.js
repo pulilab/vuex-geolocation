@@ -12,7 +12,7 @@ function sync (store, options) {
   };
   options = {...defaults, ...options};
   const mutations = {
-    'LOCATION_CHANGED' (state, {lat, lng, acc, alt, altAcc, head, spd}) {
+    'LOCATION_CHANGED' (state, {lat, lng, acc, alt, altAcc, head, spd, ts}) {
       state.lat = lat;
       state.lng = lng;
       state.acc = acc;
@@ -20,6 +20,7 @@ function sync (store, options) {
       state.altAcc = altAcc;
       state.head = head;
       state.spd = spd;
+      state.ts = ts;
     },
     'LOCATION_ERROR' (state, error) {
       state.error.code = error.code;
@@ -39,6 +40,7 @@ function sync (store, options) {
       altAcc: null,
       head: null,
       spd: null,
+      ts: null,
       watchID: null,
       error: {
         code: null,
@@ -48,7 +50,7 @@ function sync (store, options) {
     mutations
   });
 
-  function success ({coords: {latitude, longitude, accuracy, altitude, altitudeAccuracy, heading, speed}}) {
+  function success ({coords: {latitude, longitude, accuracy, altitude, altitudeAccuracy, heading, speed}, timestamp}) {
     store.commit(`${options.moduleName}/LOCATION_CHANGED`, {
       lat: latitude,
       lng: longitude,
@@ -56,7 +58,8 @@ function sync (store, options) {
       alt: altitude,
       altAcc: altitudeAccuracy,
       head: heading,
-      spd: speed
+      spd: speed,
+      ts: timestamp
     });
     store.commit(`${options.moduleName}/LOCATION_ERROR`, { code: null, message: '' });
   }

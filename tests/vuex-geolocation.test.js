@@ -93,7 +93,7 @@ describe('sync function', () => {
     const state = {
       error: {}
     };
-    store.mutations['LOCATION_CHANGED'](state, {lat: 1, lng: 2, acc: 3, alt: 4, altAcc: 5, head: 6, spd: 7});
+    store.mutations['LOCATION_CHANGED'](state, {lat: 1, lng: 2, acc: 3, alt: 4, altAcc: 5, head: 6, spd: 7, ts: 8});
     store.mutations['LOCATION_ERROR'](state, {code: 1, message: 'a'});
     store.mutations['SET_WATCH_ID'](state, 3);
 
@@ -105,6 +105,7 @@ describe('sync function', () => {
       altAcc: 5,
       head: 6,
       spd: 7,
+      ts: 8,
       error: {
         code: 1,
         message: 'a'

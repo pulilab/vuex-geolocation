@@ -19,6 +19,7 @@
         {{state.geolocation.altAcc}}
         {{state.geolocation.head}}
         {{state.geolocation.spd}}
+        {{state.geolocation.ts}}
       </div>
 
       <div>

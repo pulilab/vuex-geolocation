@@ -34,7 +34,8 @@ export default {
         alt: this.$store.state.geolocation.alt,
         altAcc: this.$store.state.geolocation.altAcc,
         head: this.$store.state.geolocation.head,
-        spd: this.$store.state.geolocation.spd
+        spd: this.$store.state.geolocation.spd,
+        ts: this.$store.state.geolocation.ts
       };
     },
     error () {
