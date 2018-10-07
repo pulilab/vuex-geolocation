@@ -14,6 +14,11 @@
       <div>
         {{state.geolocation.lat}}
         {{state.geolocation.lng}}
+        {{state.geolocation.acc}}
+        {{state.geolocation.alt}}
+        {{state.geolocation.altAcc}}
+        {{state.geolocation.head}}
+        {{state.geolocation.spd}}
       </div>
 
       <div>

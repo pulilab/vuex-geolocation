@@ -27,7 +27,15 @@
 export default {
   computed: {
     location () {
-      return {lat: this.$store.state.geolocation.lat, lng: this.$store.state.geolocation.lng};
+      return {
+        lat: this.$store.state.geolocation.lat,
+        lng: this.$store.state.geolocation.lng,
+        acc: this.$store.state.geolocation.acc,
+        alt: this.$store.state.geolocation.alt,
+        altAcc: this.$store.state.geolocation.altAcc,
+        head: this.$store.state.geolocation.head,
+        spd: this.$store.state.geolocation.spd
+      };
     },
     error () {
       return this.$store.state.geolocation.error;
