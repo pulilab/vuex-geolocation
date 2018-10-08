@@ -34,6 +34,12 @@ At this point your store will contain a new module called geolocation (if not co
 {
     lat: Number,
     lng: Number,
+    acc: Number,
+    alt: Number,
+    altAcc: Number,
+    head: Number,
+    spd: Number,
+    ts: Number,
     watchID: Number
     error: {
         code: Number
@@ -59,7 +65,16 @@ An example of using the user position in your components is:
 export default {
   computed: {
     location () {
-      return {lat: this.$store.state.geolocation.lat, lng: this.$store.state.geolocation.lng}
+      return {
+        lat: this.$store.state.geolocation.lat,
+        lng: this.$store.state.geolocation.lng,
+        acc: this.$store.state.geolocation.acc,
+        alt: this.$store.state.geolocation.alt,
+        altAcc: this.$store.state.geolocation.altAcc,
+        head: this.$store.state.geolocation.head,
+        spd: this.$store.state.geolocation.spd,
+        ts: this.$store.state.geolocation.ts
+      };
     },
     error () {
       return this.$store.state.geolocation.error;
